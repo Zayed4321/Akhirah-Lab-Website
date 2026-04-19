@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-purple: #7038F0;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-light: #F8F9FA;
+  --font-sans: var(--font-poppins);
+}
