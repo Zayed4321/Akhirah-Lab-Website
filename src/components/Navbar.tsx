@@ -21,18 +21,24 @@ export function Navbar() {
 
         {/* Center: Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          {['Service', 'About Us', 'Case Study', 'Blog', 'Career', 'Pricing', 'Contact'].map((item) => (
-            <Link
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className="text-lg font-medium text-brand-dark hover:text-brand-purple transition-colors duration-300 flex items-center gap-1"
-            >
-              {item}
-              {item === 'Case Study' && (
-                <ChevronDown className="w-4 h-4 text-brand-dark/50" />
-              )}
-            </Link>
-          ))}
+          {['Service', 'About Us', 'Case Study', 'Blog', 'Career', 'Pricing', 'Contact'].map((item) => {
+            let href = `#${item.toLowerCase().replace(' ', '-')}`;
+            if (item === 'About Us') href = '/about';
+            if (item === 'Contact') href = '/contact';
+            
+            return (
+              <Link
+                key={item}
+                href={href}
+                className="text-lg font-medium text-brand-dark hover:text-brand-purple transition-colors duration-300 flex items-center gap-1"
+              >
+                {item}
+                {item === 'Case Study' && (
+                  <ChevronDown className="w-4 h-4 text-brand-dark/50" />
+                )}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right: CTA */}
