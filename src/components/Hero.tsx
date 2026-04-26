@@ -2,8 +2,9 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="pt-24 px-4 text-center max-w-7xl mx-auto">
-      {/* Top Badge */}
+    <section className="bg-violet-50 w-full pt-40 pb-32 relative text-center px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Badge */}
       <div className="inline-flex items-center bg-brand-purple/10 text-brand-purple px-4 py-1 rounded-full text-sm font-medium mb-6">
         Available for new projects
       </div>
@@ -40,6 +41,7 @@ export function Hero() {
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

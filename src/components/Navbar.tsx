@@ -25,6 +25,7 @@ export function Navbar() {
             let href = `#${item.toLowerCase().replace(' ', '-')}`;
             if (item === 'About Us') href = '/about';
             if (item === 'Contact') href = '/contact';
+            if (item === 'Career') href = '/careers';
             
             return (
               <Link
